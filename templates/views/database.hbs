@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Records</title>
+</head>
+<body style="background-color: black;">
+    
+    <header>
+    <div class="wrapper">
+        
+<ul class="nav-area">
+<li><a href="./home">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="./profile">Profile</a></li>
+<li><a href="./logout" >Logout</a></li>
+
+</ul>
+</div>
+
+</header>
+    {{!-- <ul>
+        {{#each records}}
+        {{firstName}}<br>
+        {{lastName}}<br>
+        {{email}}<br>
+        {{phone}}<br>
+        {{/each}}
+    </ul> --}}
+    <table >
+    <tbody>
+        {{#each records}}
+        
+            <tr>
+                <td><a href="/Register/{{this.email}}">{{this.firstName}}</a></td>
+                {{!-- <td>{{this.lastName}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td> --}}
+
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin-top: 200px;
+  margin-left: 200px;
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+  text-align: center;
+   
+}
+td a{
+    text-decoration: none;
+    text-transform:uppercase ;
+    color: rgb(26, 180, 201);
+    font-weight: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+  
+}
+
+
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+    margin-bottom: 100px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+</style>
+
+
+</body>
+</html>

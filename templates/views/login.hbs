@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MyForm:Register</title>
+    {{>header}}
+
+</head>
+<body>
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="POST">
+			<h1>Create Account</h1>
+			
+			  <input type="text" name="firstName" placeholder="First Name *" value="">
+			 <input type="text"  name="lastName" placeholder="Last Name *" value="">
+             <input type="text" name="email" placeholder="Email Address" required>
+			<input type="text" minlength="10" maxlength="10" name="phone"  placeholder="Your Phone *" value="">
+			<input type="password"  name="password" placeholder="Password *" value="">
+			 <input type="password" name="confirmPassword" placeholder="Confirm Password *" value="">
+			 <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Register">
+                  </div>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+			<h1>Sign in</h1>
+			
+			
+			<input type="text" name="email" placeholder="Email Address"  value ="" required>
+			<input type="password" name="password" placeholder="Password" value ="" required>
+			<a href="#">Forgot your password?</a>
+			<div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		For more details Visit <i class="fa fa-heart"></i>my 
+		<a target="_blank" href="https://florin-pop.com"> Page</a>
+		- keep Loving
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+	</p>
+</footer>
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+
+</body>
+</html>

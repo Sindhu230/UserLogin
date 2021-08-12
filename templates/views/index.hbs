@@ -1,0 +1,164 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+   
+</head>
+<body>
+  
+  
+ 
+</body>
+</html> --}}
+
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    {{>header}}
+    <meta charset="UTF-8">
+    <title>How to Create responsive Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="./home">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="./profile">Profile</a></li>
+<li><a href="./logout" >Logout</a></li>
+
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+We are <span>Creative</span></h1>
+<a href="#">Contact US</a>
+    </div>
+</header>
+
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
+	height: 100vh;
+    width: 1580px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 50%;
+	padding: 15px 0;
+   
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	img {
+		width: ;
+	}
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+</style>
+</body>
+</html>
